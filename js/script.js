@@ -11,7 +11,7 @@ $(document).ready(function () {
                 items: 1,
                 dots: true,
                 nav: false
-                },
+            },
             480: {
                 items: 1
             }
@@ -28,8 +28,8 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
-                
-                },
+
+            },
             480: {
                 items: 2
             },
@@ -40,5 +40,17 @@ $(document).ready(function () {
                 items: 4
             }
         }
+    });
+
+    const iconSearch = document.querySelector('.icons__search');
+    const body = document.querySelector('body');
+
+    iconSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+        this.classList.add('icons__search__active');
+    });
+
+    body.addEventListener('click', function (event) {
+        this.classList.remove('icons__search__active');
     });
 });
